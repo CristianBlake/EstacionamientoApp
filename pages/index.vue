@@ -16,13 +16,13 @@ const actionCards = [
     icon: 'ic:baseline-plus',
     twice: 'ri:police-car-fill',
     label: 'Alta oficial',
-    route: '#'
+    route: '/oficial'
   },
   {
     icon: 'ic:baseline-plus',
     twice: 'mdi:car-estate',
     label: 'Alta residente',
-    route: '#'
+    route: '/resident'
   },
   {
     icon: 'material-symbols:calendar-month',

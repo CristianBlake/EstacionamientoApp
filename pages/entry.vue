@@ -12,9 +12,9 @@ setInterval(() => {
 
 <template>
   <Header title="Registrar entrada de vehículo" />
-  <div class="md:grid md:grid-cols-2 md:content-center">
+  <div class="lg:grid lg:grid-cols-2 lg:content-center">
     <div class="my-20">
-      <div class="flex items-center md:hidden">
+      <div class="flex items-center lg:hidden">
         <img src="~/assets/visitors.png" class="w-96">
       </div>
 
@@ -40,7 +40,7 @@ setInterval(() => {
         </FormKit>
       </div>
     </div>
-    <div class="sm:hidden md:block flex items-center content-center">
+    <div class="hidden lg:block flex items-center content-center">
       <img src="~/assets/visitors.png" class="w-full">
     </div>
   </div>
