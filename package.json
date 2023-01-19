@@ -17,6 +17,7 @@
   "dependencies": {
     "@formkit/addons": "^1.0.0-beta.12",
     "@formkit/nuxt": "^1.0.0-beta.12",
-    "@formkit/themes": "^1.0.0-beta.12"
+    "@formkit/themes": "^1.0.0-beta.12",
+    "vue-toastification": "^2.0.0-rc.5"
   }
 }

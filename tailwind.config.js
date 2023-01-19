@@ -7,6 +7,7 @@ module.exports = {
     "./plugins/**/*.{js,ts}",
     "./nuxt.config.{js,ts}",
     "./app.vue",
+    "node_modules/tv-*/dist/tv-*.umd.min.js",
   ],
   theme: {
     extend: {},

@@ -1,12 +1,18 @@
 <script setup lang="ts">
-const newEntry = async (value: {}) => {
-    await console.log(value);
+
+const currentTime = ref<string>();
+const { currentDate } = useTime();
+
+const newEntry = async (form: {}) => {
+  
+  form = { ...form, entry: `${currentDate} ${currentTime.value}`};
+ 
+  usePostFetch('entry', form, '/');
+
 }
 
-const now = ref<string>();
-
 setInterval(() => {
-    now.value = useTime().currentDate
+    currentTime.value = useTime().currentTime;
 }, 1000)
 </script>
 
@@ -20,7 +26,8 @@ setInterval(() => {
 
       <div class="block my-8">
         <p class="font-bold text-sm">Hora de entrada:</p>
-        <p class="text-4xl font-bold">{{ now }}</p>
+        <p class="text-4xl font-bold">{{ currentTime }}</p>
+        <span v-once>{{ currentDate }}</span>
       </div>
 
       <div class="block">
