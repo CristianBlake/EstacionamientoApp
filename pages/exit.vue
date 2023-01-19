@@ -1,12 +1,15 @@
 <script setup lang="ts">
-const newExit = async (value: {}) => {
-    await console.log(value);
+
+const currentTime = ref<string>();
+const { currentDate } = useTime();
+
+const newExit = async (form: {}) => {
+  form = { ...form, exit: `${currentDate} ${currentTime.value}`};
+  usePostFetch('exit', form, '/');
 }
 
-const now = ref<string>();
-
 setInterval(() => {
-    now.value = useTime().currentDate
+    currentTime.value = useTime().currentTime;
 }, 1000)
 </script>
 
@@ -20,7 +23,7 @@ setInterval(() => {
 
       <div class="block my-8">
         <p class="font-bold text-sm">Hora de salida:</p>
-        <p class="text-4xl font-bold">{{ now }}</p>
+        <p class="text-4xl font-bold">{{ currentTime }}</p>
       </div>
 
       <div class="block">
