@@ -1,6 +1,6 @@
 <script setup lang="ts">
-const newResident = async (value: {}) => {
-    await console.log(value);
+const newResident = async (form: {}) => {
+  usePostFetch('resident', form, '/');
 }
 </script>
 

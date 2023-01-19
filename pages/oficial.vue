@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const newOficial = async (form: {}) => {
-  usePostFetch('entry', form, '/');
+  usePostFetch('oficial', form, '/');
 }
 </script>
 
